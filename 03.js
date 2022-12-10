@@ -12,9 +12,16 @@ function buscarAmigo(amigos, nombre) {
   // Ej:
   //  var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
-  for(obj of amigos){
-    console.log(amigos);
-   }
+  var i = 0;
+  while (i < amigos.length && amigos[i].nombre != nombre) {
+    i++;
+  }
+  if (i < amigos.length) {
+    return amigos[i];
+  }
+  else {
+    return null;
+  }
 }
 
 // No modifiques nada debajo de esta linea //
